@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800">
+  <defs>
+    <!-- Fake "game scene" gradient - purple/blue for a streamy look -->
+    <linearGradient id="scene" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="50%" stop-color="#581c87"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.3" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.7" cy="0.7" r="0.4">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="1280" height="800" fill="#0f172a"/>
+
+  <!-- Header band -->
+  <text x="60" y="60" font-family="sans-serif" font-size="38" font-weight="700" fill="#f1f5f9" letter-spacing="-0.5">Rectangles</text>
+  <text x="60" y="92" font-family="sans-serif" font-size="18" fill="#94a3b8">Cover overlays burned into video — color matches the pixels behind them</text>
+
+  <!-- BEFORE panel -->
+  <g transform="translate(60, 140)">
+    <text x="0" y="-12" font-family="sans-serif" font-size="13" font-weight="600" fill="#64748b" letter-spacing="2">BEFORE</text>
+
+    <!-- Video frame -->
+    <rect width="560" height="580" rx="8" fill="url(#scene)"/>
+    <rect width="560" height="580" rx="8" fill="url(#glow1)"/>
+    <rect width="560" height="580" rx="8" fill="url(#glow2)"/>
+
+    <!-- Faux scene shapes -->
+    <circle cx="160" cy="200" r="90" fill="#fde047" opacity="0.25"/>
+    <circle cx="420" cy="360" r="70" fill="#fb7185" opacity="0.35"/>
+    <rect x="80" y="420" width="180" height="40" fill="#1e293b" opacity="0.4" rx="4"/>
+
+    <!-- Chat overlay (the thing we want to cover) -->
+    <g>
+      <rect x="40" y="380" width="280" height="170" rx="8" fill="#000000" fill-opacity="0.72"/>
+      <text x="60" y="410" font-family="sans-serif" font-size="13" fill="#a78bfa" font-weight="600">popcatGG <tspan fill="#e2e8f0" font-weight="400">that was insane</tspan></text>
+      <text x="60" y="432" font-family="sans-serif" font-size="13" fill="#fde047" font-weight="600">streamfan42 <tspan fill="#e2e8f0" font-weight="400">POG POG POG</tspan></text>
+      <text x="60" y="454" font-family="sans-serif" font-size="13" fill="#86efac" font-weight="600">moonriver <tspan fill="#e2e8f0" font-weight="400">how does he do that</tspan></text>
+      <text x="60" y="476" font-family="sans-serif" font-size="13" fill="#fb7185" font-weight="600">qwertz_ <tspan fill="#e2e8f0" font-weight="400">clip it!!!</tspan></text>
+      <text x="60" y="498" font-family="sans-serif" font-size="13" fill="#7dd3fc" font-weight="600">vexx99 <tspan fill="#e2e8f0" font-weight="400">no way</tspan></text>
+      <text x="60" y="520" font-family="sans-serif" font-size="13" fill="#fdba74" font-weight="600">latte <tspan fill="#e2e8f0" font-weight="400">SUBBED</tspan></text>
+    </g>
+
+    <!-- Caption underneath -->
+    <text x="0" y="610" font-family="sans-serif" font-size="14" fill="#cbd5e1">Chat overlay composited into the broadcast — can't be turned off in player settings.</text>
+  </g>
+
+  <!-- AFTER panel -->
+  <g transform="translate(660, 140)">
+    <text x="0" y="-12" font-family="sans-serif" font-size="13" font-weight="600" fill="#22c55e" letter-spacing="2">AFTER</text>
+
+    <!-- Identical video frame -->
+    <rect width="560" height="580" rx="8" fill="url(#scene)"/>
+    <rect width="560" height="580" rx="8" fill="url(#glow1)"/>
+    <rect width="560" height="580" rx="8" fill="url(#glow2)"/>
+
+    <!-- Same scene shapes -->
+    <circle cx="160" cy="200" r="90" fill="#fde047" opacity="0.25"/>
+    <circle cx="420" cy="360" r="70" fill="#fb7185" opacity="0.35"/>
+    <rect x="80" y="420" width="180" height="40" fill="#1e293b" opacity="0.4" rx="4"/>
+
+    <!-- The Rectangles rectangle, color-matched to surrounding pixels.
+         The surrounding area is dominated by the dark purple gradient,
+         so the rectangle takes on a similar muted purple. -->
+    <rect x="40" y="380" width="280" height="170" rx="2" fill="#3b2563" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.6"/>
+
+    <!-- Resize handles to indicate it's interactive -->
+    <g fill="#a78bfa">
+      <circle cx="40"  cy="380" r="4"/>
+      <circle cx="180" cy="380" r="4"/>
+      <circle cx="320" cy="380" r="4"/>
+      <circle cx="40"  cy="465" r="4"/>
+      <circle cx="320" cy="465" r="4"/>
+      <circle cx="40"  cy="550" r="4"/>
+      <circle cx="180" cy="550" r="4"/>
+      <circle cx="320" cy="550" r="4"/>
+    </g>
+
+    <text x="0" y="610" font-family="sans-serif" font-size="14" fill="#cbd5e1">Drag a Rectangle over it. The cover live-samples the surrounding pixels and blends in.</text>
+  </g>
+</svg>
