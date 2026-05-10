@@ -26,6 +26,14 @@
   }
 
   function setDrawMode(on) {
+    if (on) {
+      // Hard reset: a toolbar click must always land on a clean slate, even
+      // if some prior interaction (drag, resize, config panel) leaked state
+      // because mouseup was lost to a window blur, iframe focus change, etc.
+      cancelCreating();
+      interacting = null;
+      closeConfig();
+    }
     drawMode = on;
     document.documentElement.classList.toggle('rect-drawing', on);
     if (on) toast('Rectangles: click & drag to cover');
