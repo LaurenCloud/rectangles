@@ -113,13 +113,13 @@
     setTimeout(() => document.removeEventListener('click', swallow, true), 0);
   }
 
-  // ----- Persistence (per hostname + pathname) -----
+  // ----- Persistence (per hostname + pathname + search) -----
 
   let ready = false;
   let saveBrightnessTimer = null;
 
   function storageKey() {
-    return `cb:${location.hostname}${location.pathname}`;
+    return `cb:${location.hostname}${location.pathname}${location.search}`;
   }
 
   function defaultIgnore() {
