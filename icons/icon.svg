@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <!-- 1:1 port of the canvas spec in background.js. Three slightly overlapping
+       slate-gray rounded rectangles on a 16x16 grid. Corner radius 1.2. -->
+  <rect x="1"   y="2" width="7" height="6" rx="1.2" ry="1.2" fill="#475569"/>
+  <rect x="4.5" y="5" width="7" height="6" rx="1.2" ry="1.2" fill="#94a3b8"/>
+  <rect x="8"   y="8" width="7" height="6" rx="1.2" ry="1.2" fill="#cbd5e1"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <!-- Chrome Web Store small promo tile (440x280) -->
+  <rect width="440" height="280" fill="#0f172a"/>
+
+  <!-- Icon at scale 12: each rect 84x72, corner radius 14.4 -->
+  <!-- Bbox spans x=12..180 (168w), y=24..168 (144h). Translate by (26, 68). -->
+  <g transform="translate(14, 56)">
+    <rect x="12"  y="24"  width="84" height="72" rx="14.4" ry="14.4" fill="#475569"/>
+    <rect x="54"  y="60"  width="84" height="72" rx="14.4" ry="14.4" fill="#94a3b8"/>
+    <rect x="96"  y="96"  width="84" height="72" rx="14.4" ry="14.4" fill="#cbd5e1"/>
+  </g>
+
+  <!-- Wordmark + tagline on the right -->
+  <g font-family="-apple-system, 'Segoe UI', Roboto, system-ui, sans-serif" fill="#f1f5f9">
+    <text x="200" y="138" font-size="34" font-weight="700" letter-spacing="-0.5">Rectangles</text>
+    <text x="200" y="166" font-size="14" font-weight="400" fill="#94a3b8">Cover regions. Match the video.</text>
+  </g>
+</svg>
